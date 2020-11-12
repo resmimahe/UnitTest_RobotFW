@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.2 on win32)" generated="20201112 04:02:58.391" rpa="false">
+<suite id="s1" name="DemoApp UIautomation" source="C:\Users\Resmi Mahesan\EclipseWorkspaceNew\DemoApp_UIautomation">
+<suite id="s1-s1" name="Tests" source="C:\Users\Resmi Mahesan\EclipseWorkspaceNew\DemoApp_UIautomation\Tests">
+<suite id="s1-s1-s1" name="fieldValidationTest2" source="C:\Users\Resmi Mahesan\EclipseWorkspaceNew\DemoApp_UIautomation\Tests\fieldValidationTest2.robot">
+<test id="s1-s1-s1-t1" name="TC014_Registration_Username field validationTest">
+<kw name="Launching the demo app" library="setupAndTeardownKeyword" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${App url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:02.634" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8090/'.</msg>
+<status status="PASS" starttime="20201112 04:03:02.633" endtime="20201112 04:03:24.603"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201112 04:03:24.605" endtime="20201112 04:03:26.975"></status>
+</kw>
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20201112 04:03:26.975" endtime="20201112 04:03:26.999"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:03:02.631" endtime="20201112 04:03:27.000"></status>
+</kw>
+<kw name="User clicks on registration link" library="userRegistrationKeyword">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${register_Link_PartialLinkText}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:27.006" level="INFO">Clicking link 'Register'.</msg>
+<status status="PASS" starttime="20201112 04:03:27.003" endtime="20201112 04:03:27.675"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:03:27.001" endtime="20201112 04:03:27.676"></status>
+</kw>
+<kw name="User clicks on registor button" library="userRegistrationKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${registerBtn_Button_Xpath}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:27.680" level="INFO">Clicking element '//input[@value='Register']'.</msg>
+<status status="PASS" starttime="20201112 04:03:27.679" endtime="20201112 04:03:28.603"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:03:27.677" endtime="20201112 04:03:28.607"></status>
+</kw>
+<kw name="Enter invalid input types in username field and move to other field" library="validationKeywords">
+<arguments>
+<arg>${UsernameWith_WhiteSpaceAlone}</arg>
+<arg>${PWD}</arg>
+<arg>${FirstName}</arg>
+<arg>${LastName}</arg>
+<arg>${Phone}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${userId_textBox_ID}</arg>
+<arg>${Username_withWhiteSpacealone}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:28.612" level="INFO">Typing text '' into text field 'username'.</msg>
+<status status="PASS" starttime="20201112 04:03:28.611" endtime="20201112 04:03:29.011"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password_textBox_ID}</arg>
+<arg>${pwd}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:29.013" level="INFO">Typing text 'Test@123' into text field 'password'.</msg>
+<status status="PASS" starttime="20201112 04:03:29.012" endtime="20201112 04:03:29.239"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${firstName_textbox_ID}</arg>
+<arg>${Firstname}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:29.242" level="INFO">Typing text 'DemoUser' into text field 'firstname'.</msg>
+<status status="PASS" starttime="20201112 04:03:29.240" endtime="20201112 04:03:29.417"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${familyName_textbox_ID}</arg>
+<arg>${lastName}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:29.420" level="INFO">Typing text 'DemoTest' into text field 'lastname'.</msg>
+<status status="PASS" starttime="20201112 04:03:29.418" endtime="20201112 04:03:29.618"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${phoneNumber_textbox_ID}</arg>
+<arg>${phone}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:29.620" level="INFO">Typing text '8908976590' into text field 'phone'.</msg>
+<status status="PASS" starttime="20201112 04:03:29.619" endtime="20201112 04:03:29.831"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:03:28.608" endtime="20201112 04:03:29.832"></status>
+</kw>
+<kw name="User clicks on registor button" library="userRegistrationKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${registerBtn_Button_Xpath}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:29.835" level="INFO">Clicking element '//input[@value='Register']'.</msg>
+<status status="PASS" starttime="20201112 04:03:29.834" endtime="20201112 04:03:29.883"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:03:29.833" endtime="20201112 04:03:29.884"></status>
+</kw>
+<kw name="Verify the Registration is unsucceesfull" library="userRegistrationKeyword">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Register - Demo App</arg>
+</arguments>
+<msg timestamp="20201112 04:03:29.896" level="INFO">Page title is 'Register - Demo App'.</msg>
+<status status="PASS" starttime="20201112 04:03:29.887" endtime="20201112 04:03:29.897"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:03:29.886" endtime="20201112 04:03:29.898"></status>
+</kw>
+<doc>This testcase verify whether the user field accept special character,Numbers,White space in the beginning etc</doc>
+<tags>
+<tag>Functional</tag>
+</tags>
+<status status="PASS" starttime="20201112 04:03:02.629" endtime="20201112 04:03:29.899" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="TC015_Registration Password field validationTest">
+<kw name="Launching the demo app" library="setupAndTeardownKeyword" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${App url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:29.907" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8090/'.</msg>
+<status status="PASS" starttime="20201112 04:03:29.905" endtime="20201112 04:03:47.672"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201112 04:03:47.673" endtime="20201112 04:03:49.878"></status>
+</kw>
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20201112 04:03:49.879" endtime="20201112 04:03:49.887"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:03:29.904" endtime="20201112 04:03:49.888"></status>
+</kw>
+<kw name="User clicks on registration link" library="userRegistrationKeyword">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${register_Link_PartialLinkText}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:49.890" level="INFO">Clicking link 'Register'.</msg>
+<status status="PASS" starttime="20201112 04:03:49.889" endtime="20201112 04:03:50.420"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:03:49.888" endtime="20201112 04:03:50.422"></status>
+</kw>
+<kw name="User clicks on registor button" library="userRegistrationKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${registerBtn_Button_Xpath}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:50.425" level="INFO">Clicking element '//input[@value='Register']'.</msg>
+<status status="PASS" starttime="20201112 04:03:50.424" endtime="20201112 04:03:51.287"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:03:50.422" endtime="20201112 04:03:51.288"></status>
+</kw>
+<kw name="Enter invalid input types in password field and move to other field" library="validationKeywords">
+<arguments>
+<arg>${Username1}</arg>
+<arg>${PWD_withWhiteSpace}</arg>
+<arg>${PWD_withLessThan4char}</arg>
+<arg>${FirstName}</arg>
+<arg>${LastName}</arg>
+<arg>${Phone}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${userId_textBox_ID}</arg>
+<arg>${Username}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:51.295" level="INFO">Typing text 'test101' into text field 'username'.</msg>
+<status status="PASS" starttime="20201112 04:03:51.292" endtime="20201112 04:03:51.452"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password_textBox_ID}</arg>
+<arg>${pwd_withWhiteSpaceAlone}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:51.454" level="INFO">Typing text '' into text field 'password'.</msg>
+<status status="PASS" starttime="20201112 04:03:51.452" endtime="20201112 04:03:51.736"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${firstName_textbox_ID}</arg>
+<arg>${Firstname}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:51.738" level="INFO">Typing text 'DemoUser' into text field 'firstname'.</msg>
+<status status="PASS" starttime="20201112 04:03:51.737" endtime="20201112 04:03:51.890"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${password_textBox_ID}</arg>
+</arguments>
+<status status="PASS" starttime="20201112 04:03:51.890" endtime="20201112 04:03:51.925"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password_textBox_ID}</arg>
+<arg>${pwd_lessThan4Character}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:51.927" level="INFO">Typing text '12' into text field 'password'.</msg>
+<status status="PASS" starttime="20201112 04:03:51.926" endtime="20201112 04:03:52.040"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${firstName_textbox_ID}</arg>
+<arg>${Firstname}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:52.041" level="INFO">Typing text 'DemoUser' into text field 'firstname'.</msg>
+<status status="PASS" starttime="20201112 04:03:52.040" endtime="20201112 04:03:52.167"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${familyName_textbox_ID}</arg>
+<arg>${lastName}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:52.169" level="INFO">Typing text 'DemoTest' into text field 'lastname'.</msg>
+<status status="PASS" starttime="20201112 04:03:52.167" endtime="20201112 04:03:52.328"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${phoneNumber_textbox_ID}</arg>
+<arg>${phone}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:52.329" level="INFO">Typing text '8908976590' into text field 'phone'.</msg>
+<status status="PASS" starttime="20201112 04:03:52.329" endtime="20201112 04:03:52.475"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:03:51.289" endtime="20201112 04:03:52.475"></status>
+</kw>
+<kw name="User clicks on registor button" library="userRegistrationKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${registerBtn_Button_Xpath}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:52.478" level="INFO">Clicking element '//input[@value='Register']'.</msg>
+<status status="PASS" starttime="20201112 04:03:52.477" endtime="20201112 04:03:53.404"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:03:52.476" endtime="20201112 04:03:53.405"></status>
+</kw>
+<kw name="Verify the Registration is unsucceesfull" library="userRegistrationKeyword">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Register - Demo App</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201112 04:03:53.776" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201112 04:03:53.420" endtime="20201112 04:03:53.777"></status>
+</kw>
+<msg timestamp="20201112 04:03:54.379" level="FAIL">Title should have been 'Register - Demo App' but was 'Log In - Demo App'.</msg>
+<status status="FAIL" starttime="20201112 04:03:53.408" endtime="20201112 04:03:54.380"></status>
+</kw>
+<status status="FAIL" starttime="20201112 04:03:53.406" endtime="20201112 04:03:54.381"></status>
+</kw>
+<doc>This testcase verify whether the password field accept White space alone,Pwd with less than 4 char</doc>
+<tags>
+<tag>Functional</tag>
+</tags>
+<status status="FAIL" starttime="20201112 04:03:29.901" endtime="20201112 04:03:54.382" critical="yes">Title should have been 'Register - Demo App' but was 'Log In - Demo App'.</status>
+</test>
+<test id="s1-s1-s1-t3" name="TC016_Registration_Firstname field Validation">
+<kw name="Launching the demo app" library="setupAndTeardownKeyword" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${App url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20201112 04:03:54.393" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8090/'.</msg>
+<status status="PASS" starttime="20201112 04:03:54.391" endtime="20201112 04:04:20.378"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201112 04:04:20.379" endtime="20201112 04:04:22.553"></status>
+</kw>
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20201112 04:04:22.554" endtime="20201112 04:04:22.562"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:03:54.389" endtime="20201112 04:04:22.562"></status>
+</kw>
+<kw name="User clicks on registration link" library="userRegistrationKeyword">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${register_Link_PartialLinkText}</arg>
+</arguments>
+<msg timestamp="20201112 04:04:22.564" level="INFO">Clicking link 'Register'.</msg>
+<status status="PASS" starttime="20201112 04:04:22.563" endtime="20201112 04:04:23.062"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:04:22.563" endtime="20201112 04:04:23.064"></status>
+</kw>
+<kw name="User clicks on registor button" library="userRegistrationKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${registerBtn_Button_Xpath}</arg>
+</arguments>
+<msg timestamp="20201112 04:04:23.068" level="INFO">Clicking element '//input[@value='Register']'.</msg>
+<status status="PASS" starttime="20201112 04:04:23.067" endtime="20201112 04:04:25.427"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:04:23.065" endtime="20201112 04:04:25.428"></status>
+</kw>
+<kw name="Enter invalid input types in firstname field and move to other field" library="validationKeywords">
+<arguments>
+<arg>${Username2}</arg>
+<arg>${PWD}</arg>
+<arg>${firstname_withspecialChar}</arg>
+<arg>${Firstname_withWhiteSpaceAlone}</arg>
+<arg>${firstname_withNumbersAlone}</arg>
+<arg>${LastName}</arg>
+<arg>${Phone}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${userId_textBox_ID}</arg>
+<arg>${Username}</arg>
+</arguments>
+<msg timestamp="20201112 04:04:25.432" level="INFO">Typing text 'test102' into text field 'username'.</msg>
+<status status="PASS" starttime="20201112 04:04:25.431" endtime="20201112 04:04:25.565"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password_textBox_ID}</arg>
+<arg>${pwd}</arg>
+</arguments>
+<msg timestamp="20201112 04:04:25.566" level="INFO">Typing text 'Test@123' into text field 'password'.</msg>
+<status status="PASS" starttime="20201112 04:04:25.566" endtime="20201112 04:04:25.713"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${firstName_textBox_ID}</arg>
+<arg>${firstname_withspecialChar}</arg>
+</arguments>
+<msg timestamp="20201112 04:04:25.714" level="INFO">Typing text '%$%$%##' into text field 'firstname'.</msg>
+<status status="PASS" starttime="20201112 04:04:25.713" endtime="20201112 04:04:25.926"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${familyName_textbox_ID}</arg>
+<arg>${lastName}</arg>
+</arguments>
+<msg timestamp="20201112 04:04:25.927" level="INFO">Typing text 'DemoTest' into text field 'lastname'.</msg>
+<status status="PASS" starttime="20201112 04:04:25.927" endtime="20201112 04:04:26.116"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${firstName_textBox_ID}</arg>
+</arguments>
+<status status="PASS" starttime="20201112 04:04:26.116" endtime="20201112 04:04:26.160"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${firstName_textBox_ID}</arg>
+<arg>${Firstname_withWhiteSpaceAlone}</arg>
+</arguments>
+<msg timestamp="20201112 04:04:26.161" level="INFO">Typing text '' into text field 'firstname'.</msg>
+<status status="PASS" starttime="20201112 04:04:26.160" endtime="20201112 04:04:26.237"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${phoneNumber_textbox_ID}</arg>
+<arg>${phone}</arg>
+</arguments>
+<msg timestamp="20201112 04:04:26.238" level="INFO">Typing text '8908976590' into text field 'phone'.</msg>
+<status status="PASS" starttime="20201112 04:04:26.237" endtime="20201112 04:04:26.368"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${firstName_textBox_ID}</arg>
+</arguments>
+<status status="PASS" starttime="20201112 04:04:26.369" endtime="20201112 04:04:26.405"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${firstName_textBox_ID}</arg>
+<arg>${firstname_withNumbersAlone}</arg>
+</arguments>
+<msg timestamp="20201112 04:04:26.406" level="INFO">Typing text '666676' into text field 'firstname'.</msg>
+<status status="PASS" starttime="20201112 04:04:26.405" endtime="20201112 04:04:26.496"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:04:25.429" endtime="20201112 04:04:26.497"></status>
+</kw>
+<kw name="User clicks on registor button" library="userRegistrationKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${registerBtn_Button_Xpath}</arg>
+</arguments>
+<msg timestamp="20201112 04:04:26.498" level="INFO">Clicking element '//input[@value='Register']'.</msg>
+<status status="PASS" starttime="20201112 04:04:26.498" endtime="20201112 04:04:29.476"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:04:26.497" endtime="20201112 04:04:29.478"></status>
+</kw>
+<kw name="Verify the Registration is unsucceesfull" library="userRegistrationKeyword">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Register - Demo App</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201112 04:04:30.188" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201112 04:04:29.490" endtime="20201112 04:04:30.189"></status>
+</kw>
+<msg timestamp="20201112 04:04:30.193" level="FAIL">Title should have been 'Register - Demo App' but was 'Log In - Demo App'.</msg>
+<status status="FAIL" starttime="20201112 04:04:29.481" endtime="20201112 04:04:30.193"></status>
+</kw>
+<status status="FAIL" starttime="20201112 04:04:29.480" endtime="20201112 04:04:30.195"></status>
+</kw>
+<doc>This testcase verify whether the firstname field accept Invalid inputs like whitespace alone,special characters and numbers</doc>
+<tags>
+<tag>Functional</tag>
+</tags>
+<status status="FAIL" starttime="20201112 04:03:54.385" endtime="20201112 04:04:30.196" critical="yes">Title should have been 'Register - Demo App' but was 'Log In - Demo App'.</status>
+</test>
+<test id="s1-s1-s1-t4" name="TC017_Registration_Lastname field Validation">
+<kw name="Launching the demo app" library="setupAndTeardownKeyword" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${App url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20201112 04:04:30.206" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8090/'.</msg>
+<status status="PASS" starttime="20201112 04:04:30.205" endtime="20201112 04:04:54.854"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201112 04:04:54.855" endtime="20201112 04:04:57.264"></status>
+</kw>
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20201112 04:04:57.264" endtime="20201112 04:04:57.276"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:04:30.203" endtime="20201112 04:04:57.278"></status>
+</kw>
+<kw name="User clicks on registration link" library="userRegistrationKeyword">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${register_Link_PartialLinkText}</arg>
+</arguments>
+<msg timestamp="20201112 04:04:57.280" level="INFO">Clicking link 'Register'.</msg>
+<status status="PASS" starttime="20201112 04:04:57.279" endtime="20201112 04:04:57.932"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:04:57.278" endtime="20201112 04:04:57.933"></status>
+</kw>
+<kw name="User clicks on registor button" library="userRegistrationKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${registerBtn_Button_Xpath}</arg>
+</arguments>
+<msg timestamp="20201112 04:04:57.937" level="INFO">Clicking element '//input[@value='Register']'.</msg>
+<status status="PASS" starttime="20201112 04:04:57.936" endtime="20201112 04:05:01.129"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:04:57.934" endtime="20201112 04:05:01.131"></status>
+</kw>
+<kw name="Enter invalid input types in lastname field and move to other field" library="validationKeywords">
+<arguments>
+<arg>${Username3}</arg>
+<arg>${PWD}</arg>
+<arg>${FirstName}</arg>
+<arg>${lastname_withspecialChar}</arg>
+<arg>${lastname_withWhiteSpaceAlone}</arg>
+<arg>${lastname_withNumbersAlone}</arg>
+<arg>${Phone}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${userId_textBox_ID}</arg>
+<arg>${Username}</arg>
+</arguments>
+<msg timestamp="20201112 04:05:01.143" level="INFO">Typing text 'test103' into text field 'username'.</msg>
+<status status="PASS" starttime="20201112 04:05:01.141" endtime="20201112 04:05:01.451"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password_textBox_ID}</arg>
+<arg>${pwd}</arg>
+</arguments>
+<msg timestamp="20201112 04:05:01.453" level="INFO">Typing text 'Test@123' into text field 'password'.</msg>
+<status status="PASS" starttime="20201112 04:05:01.452" endtime="20201112 04:05:01.799"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${firstName_textBox_ID}</arg>
+<arg>${firstname}</arg>
+</arguments>
+<msg timestamp="20201112 04:05:01.800" level="INFO">Typing text 'DemoUser' into text field 'firstname'.</msg>
+<status status="PASS" starttime="20201112 04:05:01.799" endtime="20201112 04:05:01.977"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${familyName_textbox_ID}</arg>
+<arg>${lastname_withspecialChar}</arg>
+</arguments>
+<msg timestamp="20201112 04:05:01.978" level="INFO">Typing text '%$%**##' into text field 'lastname'.</msg>
+<status status="PASS" starttime="20201112 04:05:01.977" endtime="20201112 04:05:02.110"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${phoneNumber_textbox_ID}</arg>
+<arg>${phone}</arg>
+</arguments>
+<msg timestamp="20201112 04:05:02.111" level="INFO">Typing text '8908976590' into text field 'phone'.</msg>
+<status status="PASS" starttime="20201112 04:05:02.110" endtime="20201112 04:05:02.250"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${familyName_textbox_ID}</arg>
+</arguments>
+<status status="PASS" starttime="20201112 04:05:02.251" endtime="20201112 04:05:02.289"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${familyName_textbox_ID}</arg>
+<arg>${lastname_withWhiteSpaceAlone}</arg>
+</arguments>
+<msg timestamp="20201112 04:05:02.290" level="INFO">Typing text '' into text field 'lastname'.</msg>
+<status status="PASS" starttime="20201112 04:05:02.289" endtime="20201112 04:05:02.366"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${familyName_textbox_ID}</arg>
+</arguments>
+<status status="PASS" starttime="20201112 04:05:02.366" endtime="20201112 04:05:02.402"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${familyName_textbox_ID}</arg>
+<arg>${lastname_withNumbersAlone}</arg>
+</arguments>
+<msg timestamp="20201112 04:05:02.403" level="INFO">Typing text '666676' into text field 'lastname'.</msg>
+<status status="PASS" starttime="20201112 04:05:02.402" endtime="20201112 04:05:02.472"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:05:01.132" endtime="20201112 04:05:02.473"></status>
+</kw>
+<kw name="User clicks on registor button" library="userRegistrationKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${registerBtn_Button_Xpath}</arg>
+</arguments>
+<msg timestamp="20201112 04:05:02.474" level="INFO">Clicking element '//input[@value='Register']'.</msg>
+<status status="PASS" starttime="20201112 04:05:02.474" endtime="20201112 04:05:03.386"></status>
+</kw>
+<status status="PASS" starttime="20201112 04:05:02.473" endtime="20201112 04:05:03.387"></status>
+</kw>
+<kw name="Verify the Registration is unsucceesfull" library="userRegistrationKeyword">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Register - Demo App</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201112 04:05:03.856" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201112 04:05:03.403" endtime="20201112 04:05:03.857"></status>
+</kw>
+<msg timestamp="20201112 04:05:03.860" level="FAIL">Title should have been 'Register - Demo App' but was 'Log In - Demo App'.</msg>
+<status status="FAIL" starttime="20201112 04:05:03.393" endtime="20201112 04:05:03.861"></status>
+</kw>
+<status status="FAIL" starttime="20201112 04:05:03.390" endtime="20201112 04:05:03.863"></status>
+</kw>
+<doc>This testcase verify whether the lasttname field accept Invalid inputs like whitespace alone,special characters and numbers</doc>
+<tags>
+<tag>Functional</tag>
+</tags>
+<status status="FAIL" starttime="20201112 04:04:30.198" endtime="20201112 04:05:03.865" critical="yes">Title should have been 'Register - Demo App' but was 'Log In - Demo App'.</status>
+</test>
+<test id="s1-s1-s1-t5" name="TC018_Registration_phone field Validation">
+<kw name="Launching the demo app" library="setupAndTeardownKeyword" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${App url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20201112 04:05:03.874" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8090/'.</msg>
+<status status="PASS" starttime="20201112 04:05:03.872" endtime="20201112 04:05:26.630"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201112 04:06:02.069" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201112 04:05:52.599" endtime="20201112 04:06:02.070"></status>
+</kw>
+<msg timestamp="20201112 04:06:04.952" level="FAIL">WebDriverException: Message: unknown error: failed to change window state to 'normal', current state is 'minimized'
+  (Session info: chrome=86.0.4240.183)
+</msg>
+<status status="FAIL" starttime="20201112 04:05:26.634" endtime="20201112 04:06:04.953"></status>
+</kw>
+<status status="FAIL" starttime="20201112 04:05:03.870" endtime="20201112 04:06:04.954"></status>
+</kw>
+<doc>This testcase verify whether the lasttname field accept Invalid inputs like whitespace alone,special characters and numbers</doc>
+<tags>
+<tag>Functional</tag>
+</tags>
+<status status="FAIL" starttime="20201112 04:05:03.867" endtime="20201112 04:06:04.955" critical="yes">Setup failed:
+WebDriverException: Message: unknown error: failed to change window state to 'normal', current state is 'minimized'
+  (Session info: chrome=86.0.4240.183)
+</status>
+</test>
+<status status="FAIL" starttime="20201112 04:02:58.921" endtime="20201112 04:06:04.962"></status>
+</suite>
+<status status="FAIL" starttime="20201112 04:02:58.908" endtime="20201112 04:06:04.985"></status>
+</suite>
+<status status="FAIL" starttime="20201112 04:02:58.683" endtime="20201112 04:06:04.995"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="4">Critical Tests</stat>
+<stat pass="1" fail="4">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="4">Functional</stat>
+</tag>
+<suite>
+<stat pass="1" fail="4" id="s1" name="DemoApp UIautomation">DemoApp UIautomation</stat>
+<stat pass="1" fail="4" id="s1-s1" name="Tests">DemoApp UIautomation.Tests</stat>
+<stat pass="1" fail="4" id="s1-s1-s1" name="fieldValidationTest2">DemoApp UIautomation.Tests.fieldValidationTest2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
